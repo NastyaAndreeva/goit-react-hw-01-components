@@ -8,10 +8,7 @@ import {
 export const FriendListItem = ({ avatar, name, isOnline }) => {
   return (
     <FriendListItemUI clasName="item">
-      <StatusCheckbox
-        className="status"
-        style={{ backgroundColor: isOnline ? 'green' : 'red' }}
-      ></StatusCheckbox>
+      <StatusCheckbox className="status" isOnline={isOnline}></StatusCheckbox>
       <FriendAvatar
         className="avatar"
         src={avatar}
