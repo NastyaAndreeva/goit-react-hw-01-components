@@ -5,7 +5,7 @@ import { Box } from './../Box';
 
 export const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
-    <div className="profile">
+    <>
       <Box
         width="400px"
         margin="0 auto"
@@ -14,7 +14,7 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
         alignItems="center"
         justifyContent="center"
         marginBottom="20px"
-        style={{ backgroundColor: 'white' }}
+        bg="white"
         as="section"
       >
         <h2>My Profile</h2>
@@ -23,14 +23,14 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
           tag={tag}
           location={location}
           avatar={avatar}
-        ></Description>
+        />
         <Stats
           followers={stats.followers}
           views={stats.views}
           likes={stats.likes}
-        ></Stats>
+        />
       </Box>
-    </div>
+    </>
   );
 };
 

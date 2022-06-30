@@ -1,9 +1,8 @@
 import PropTypes from 'prop-types';
-import { ListItem, StatList, StatistisTitle } from '../../ui/Statistics';
+import { ListItem, StatList, StatistisTitle } from '.';
 import { Box } from '../../components/Box';
-import { getRandomHexColor } from 'components/getRandomColor';
 
-export const Statistics = ({ title, stats }) => {
+export const Statistics = ({ title, stats, bgColor }) => {
   return (
     <Box
       width="500px"
@@ -19,12 +18,8 @@ export const Statistics = ({ title, stats }) => {
       {title && <StatistisTitle>{title}</StatistisTitle>}
       <StatList>
         {stats.map(el => {
-          const statBackgroundColor = getRandomHexColor();
           return (
-            <ListItem
-              key={el.id}
-              style={{ backgroundColor: statBackgroundColor }}
-            >
+            <ListItem key={el.id} bgColor={bgColor}>
               <span className="label">{el.label}</span>
               <span className="percentage">{el.percentage}%</span>
             </ListItem>

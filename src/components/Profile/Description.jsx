@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { DescriptionUI, ProfileAvatar, ProfileName } from './../../ui/Profile';
+import { DescriptionUI, ProfileAvatar, ProfileName } from '.';
 
 export const Description = ({ avatar, username, tag, location }) => {
   return (

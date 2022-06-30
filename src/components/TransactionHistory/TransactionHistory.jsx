@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types';
 import { Box } from '../Box';
 import {
-  TransactionBody,
-  TransactionHeading,
-  TransactionTable,
-  TransactionText,
-  TransationHeader,
-  TransactionRow,
-} from 'ui/TransactionsTable';
+  TableBody,
+  TableHeading,
+  Table,
+  TableText,
+  TableHeader,
+  TableRow,
+} from 'ui/Table';
 
 export const TransactionHistory = ({ transactions }) => {
   return (
@@ -17,30 +17,30 @@ export const TransactionHistory = ({ transactions }) => {
       display="flex"
       flexDirection="column"
       alignItems="center"
-      style={{ backgroundColor: 'white' }}
+      bg="white"
       as="section"
     >
       <h2>Transactions History</h2>
-      <TransactionTable>
-        <TransationHeader>
-          <TransactionRow>
-            <TransactionHeading>Type</TransactionHeading>
-            <TransactionHeading>Amount</TransactionHeading>
-            <TransactionHeading>Currency</TransactionHeading>
-          </TransactionRow>
-        </TransationHeader>
-        <TransactionBody>
+      <Table>
+        <TableHeader>
+          <TableRow>
+            <TableHeading>Type</TableHeading>
+            <TableHeading>Amount</TableHeading>
+            <TableHeading>Currency</TableHeading>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
           {transactions.map(transaction => {
             return (
-              <TransactionRow key={transaction.id}>
-                <TransactionText>{transaction.type}</TransactionText>
-                <TransactionText>{transaction.amount}</TransactionText>
-                <TransactionText>{transaction.currency}</TransactionText>
-              </TransactionRow>
+              <TableRow key={transaction.id}>
+                <TableText>{transaction.type}</TableText>
+                <TableText>{transaction.amount}</TableText>
+                <TableText>{transaction.currency}</TableText>
+              </TableRow>
             );
           })}
-        </TransactionBody>
-      </TransactionTable>
+        </TableBody>
+      </Table>
     </Box>
   );
 };

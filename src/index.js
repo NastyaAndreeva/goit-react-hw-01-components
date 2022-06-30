@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { App } from 'components/App';
+import { App } from 'App';
 import './index.css';
-import { theme } from "./styles_config/theme";
+import { theme } from "./stylesConfig/theme";
 import { ThemeProvider } from 'styled-components';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
