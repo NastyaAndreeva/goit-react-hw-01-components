@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { FriendListUI } from '.';
+import { FriendListUI } from './FriendListStyled';
 import { FriendListItem } from './FriendListItem';
 import { Box } from '../Box';
 

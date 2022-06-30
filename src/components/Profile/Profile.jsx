@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
-import { Description } from './Description';
-import { Stats } from './Stats';
+import { Description, Stats } from './ProfileComponents';
 import { Box } from './../Box';
 
 export const Profile = ({ username, tag, location, avatar, stats }) => {

@@ -8,5 +8,5 @@ export const ListItem = styled.li`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: ${p => p.bgColor = getRandomHexColor()};
+    background-color: ${({bgColor}) => bgColor = getRandomHexColor()};
 `;

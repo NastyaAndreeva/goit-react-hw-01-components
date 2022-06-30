@@ -1,5 +1,9 @@
 import PropTypes from 'prop-types';
-import { FriendListItemUI, StatusCheckbox, FriendAvatar } from '.';
+import {
+  FriendListItemUI,
+  StatusCheckbox,
+  FriendAvatar,
+} from './FriendListStyled';
 
 export const FriendListItem = ({ avatar, name, isOnline }) => {
   return (

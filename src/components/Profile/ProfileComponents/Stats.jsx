@@ -1,5 +1,9 @@
 import PropTypes from 'prop-types';
-import { ProfileStatsList, ProfileStatsListItem, ProfileStatsValues } from '.';
+import {
+  ProfileStatsList,
+  ProfileStatsListItem,
+  ProfileStatsValues,
+} from '../ProfileStyled';
 
 export const Stats = ({ followers, views, likes }) => {
   return (
