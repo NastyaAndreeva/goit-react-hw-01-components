@@ -7,7 +7,7 @@ import {
   TableText,
   TableHeader,
   TableRow,
-} from 'ui/Table';
+} from 'components/ui/Table';
 
 export const TransactionHistory = ({ transactions }) => {
   return (
